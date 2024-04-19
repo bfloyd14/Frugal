@@ -38,7 +38,6 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
-
 // session middleware
 app.use(
   session({
