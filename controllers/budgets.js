@@ -20,8 +20,19 @@ function create(req, res){
   })
 }
 
+function index(req, res){
+  Budget.find({})
+  .then(budgets =>{
+    res.render('budgets/index', {
+      budgets,
+      title: 'Your Budget'
+    })
+  })
+}
+
 export {
   newBudget as new,
   create,
+  index,
 
 }
