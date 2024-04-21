@@ -8,8 +8,40 @@ function show(req, res){
       title: 'My Profile'
     })
   })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req, res){
+  Profile.findByIdAndUpdate(req.params.profileId, req.body, {new: true})
+  .then(profile =>{
+    res.redirect(`/profiles/${profile._id}`)
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/profiles')
+  })
+}
+
+function edit(req, res){
+  Profile.findById(req.params.profileId)
+  .then(profile =>{
+    res.render('profiles/edit',{
+      profile,
+      title: 'Edit Profile'
+    })
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/profiles')
+  })
 }
 
 export{
   show,
+  update,
+  edit,
+
 }

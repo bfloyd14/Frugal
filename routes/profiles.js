@@ -6,6 +6,12 @@ const router = Router()
 // GET localhost:3000/profiles
 router.get('/', isLoggedIn, profilesCtrl.show)
 
+// PUT localhost:3000/profiles/:profileId
+router.put('/:profileId', isLoggedIn, profilesCtrl.update)
+
+// GET localhost:3000/:profileId
+router.get('/:profileId/edit', isLoggedIn, profilesCtrl.edit)
+
 export {
   router
 }
