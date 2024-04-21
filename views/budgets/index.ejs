@@ -17,15 +17,19 @@
     </tr>
   </thead>
   <tbody>
-    <% budgets.forEach(budgets => { %>
+    <% budgets.forEach(budget => { %>
       <tr>
         <td><%= budgets.name %></td>
         <td><%= budgets.timestamps %></td>
         <td><%= budgets.purpose %></td>
-          <button>Details</button>
-          <button type="submit">Delete Budget</button>
+        <td><a href="/budgets/<%= budget._id %>"><button>Details</button></a></td>
+        <td>
+          <form action="/budgets/<%= budget._id %>" method="POST">
+          <button class="btn" type="submit">Delete Budget</button>
+          </form>
+        </td>
       </tr>
-    <% }) %>
+      <% }) %>
   </tbody>
 
 </main>

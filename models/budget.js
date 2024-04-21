@@ -10,7 +10,8 @@ const budgetSchema = new Schema({
     min: 1
   },
   month: String,
-  purpose: String, 
+  purpose: String,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}, 
 },{
   timestamps: true,
 })

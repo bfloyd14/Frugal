@@ -30,9 +30,36 @@ function index(req, res){
   })
 }
 
+function deleteBudget(res,req){
+  Budget.findByIdAndDelete(req.params.budgetId)
+  .then(budget =>{
+    res.redirect('/budgets')
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function show(req, res){
+  Budget.findById(req.params.budgetId)
+  .then(budget =>{
+    res.render('budgets/show',{
+      budget,
+      title: 'Budget Details'
+    })
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newBudget as new,
   create,
   index,
+  deleteBudget as delete,
+  show,
 
 }
