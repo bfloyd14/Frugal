@@ -6,7 +6,7 @@ const budgetSchema = new Schema({
   name: String,
   expenses: String,
   income: {
-    type:Number,
+    type: Number,
     min: 1
   },
   month: String,
