@@ -19,19 +19,18 @@
   <tbody>
     <% budgets.forEach(budget => { %>
       <tr>
-        <td><%= budgets.name %></td>
-        <td><%= budgets.timestamps %></td>
-        <td><%= budgets.purpose %></td>
+        <td><%= budget.name %></td>
+        <td><%= budget.timestamps %></td>
+        <td><%= budget.purpose %></td>
         <td><a href="/budgets/<%= budget._id %>"><button>Details</button></a></td>
         <td>
-          <form action="/budgets/<%= budget._id %>" method="POST">
+          <form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
           <button class="btn" type="submit">Delete Budget</button>
           </form>
         </td>
       </tr>
-      <% }) %>
   </tbody>
-
+  <% }) %>
 </main>
 
 <%- include('../partials/footer') %>

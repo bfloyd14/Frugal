@@ -25,7 +25,7 @@ function index(req, res){
   .then(budgets =>{
     res.render('budgets/index', {
       budgets,
-      title: 'Your Budget'
+      title: `Your Budget`
     })
   })
 }
@@ -46,7 +46,7 @@ function show(req, res){
   .then(budget =>{
     res.render('budgets/show',{
       budget,
-      title: 'Your Budget'
+      title: 'View Your Budget'
     })
   })
   .catch(err =>{
