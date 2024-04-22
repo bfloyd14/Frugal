@@ -1,23 +1,24 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/budgets/show.css">
 <%- include('../partials/nav') %>
 
 <main>
+  <div class="budget-container">
   <h1><%= title %></h1>
   <% if (user){ %>
   <h2><%= budget.name %></h2>
+  <h2>Goal</h2>
+    <p><%= budget.purpose %></p>
+  </div>
   <h2>$<%= budget.income.toLocaleString() %></h2>
   <% } %>
-
-<a href="/budgets/<%= budget._id %>/edit">
-  <button>Edit</button>
-</a>
-  
-
-
+  <a href="/budgets/<%= budget._id %>/edit">
+  <button id="edit-btn">Edit</button>
+  </a>
 <h3>New Expense</h3>
     <form 
     id="add-expense-form"
-    action="/budgets/<%= budget._id %>/expenses" 
+    action="/budgets/<%= budget._id %>?_method=PUT" 
     method="POST"
     >
     <label for="expense-input">Expense Name:</label>
@@ -30,11 +31,13 @@
     </select>
     <label for="cost-input">Cost:</label>
     <input type="number" name="cost" id="cost-input">
-    <button type="submit">Add Expense</button>
+    <button id="add-expense-btn" type="submit">Add Expense</button>
   </form>
-  <h2>Goal</h2>
-    <p><%= budget.purpose %></p>
-  <div class="fixed-cost-container">
+  <div class="expense-field-container">
+    <% budget.expenses.forEach(expense => { %>
+      <%= budget.name %> <%= budget.cost %>
+    <% }) %>
+    <div class="fixed-cost-container">
     <div id="fixed-cost">Fixed Cost</div>
   </div>
   <div class="planned-spending-container">
@@ -42,6 +45,7 @@
   </div>
   <div class="savings-container">
     <div id="div">Monthly Savings</div>
+    </div>
   </div>
   
 

@@ -1,0 +1,14 @@
+.expense-field-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.budget-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#edit-btn, #add-expense-btn {
+  border-radius: 6px;
+}
