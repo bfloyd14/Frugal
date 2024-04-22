@@ -6,21 +6,21 @@
   <nav>
     <% if (user) { %>
     <a 
-    href="/profiles" class="<% title === 'Profile' ? 'active' : '' %>">
+    href="/profiles" id="profile-nav" class="<% title === 'Profile' ? 'active' : '' %>">
       My Profile
     </a>
     <a 
-    href="/budgets/new" class="<% title === 'Add Budget' ? 'active' : '' %>">
+    href="/budgets/new" id="add-budget-nav" class="<% title === 'Add Budget' ? 'active' : '' %>">
       Add Budget
     </a>
     <a 
-    href="/budgets" class="<% title === 'Your Budget' ? 'active' : '' %>">
+    href="/budgets" id="your-budget-nav" class="<% title === 'Your Budget' ? 'active' : '' %>">
       Your Budget
     </a>
     <% } %>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
+        <button id="logout-btn" type="submit">Logout</button>
       </a>
     <% } else { %>
       <div 
