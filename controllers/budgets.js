@@ -70,6 +70,34 @@ function addExpense(req, res){
   })
 }
 
+function edit(req, res){
+  Budget.findById(req.params.budgetId)
+  .then(budget =>{
+    res.render('budgets/edit',{
+      budget,
+      title: 'Edit your Budget'
+    })
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/')
+    })
+}
+
+function update(req, res){
+  for(let key in req.body){
+    if(req.body[key] === '') delete req.body[key]
+  }
+  Budget.findByIdAndUpdate(req.params.budgetId, req.body, {new: true})
+  .then(budget =>{
+    res.redirect(`/budgets/${budget._id}`)
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/budgets')
+    })
+}
+
 export {
   newBudget as new,
   create,
@@ -77,4 +105,6 @@ export {
   deleteBudget as delete,
   show,
   addExpense,
+  edit,
+  update,
 }

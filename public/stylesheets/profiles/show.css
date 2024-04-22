@@ -1,0 +1,10 @@
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-profile-btn {
+  border-radius: 6px;
+}

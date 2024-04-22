@@ -1,13 +1,17 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="stylesheets/profiles/show.css">
 <%- include('../partials/nav') %>
 
-<h1><%= title %></h1>
-  <a href="/profiles/<%= profile._id %>/edit">
-  <button>Edit Profile</button>
-  </a>  
-    <h2>Name: <%= profile.name %> </h2>
-    <h2>Email: <%= user.email %></h2>
-    <h2>Avatar: <%= profile.avatar %>"></h2>
-
-
+  <section>
+    <h1><%= title %></h1>
+      <h3>Name:</h3> 
+      <h4><%= profile.name %></h4>
+      <h3>Email:</h3>
+      <h4><%= user.email %></h4>
+      <h3>Avatar:</h3>
+      <img src=<%= user.profile.avatar %>>
+      <a href="/profiles/<%= profile._id %>/edit">
+        <button id="edit-profile-btn">Edit Profile</button>
+      </a>  
+  </section>
 <%- include('../partials/footer') %>

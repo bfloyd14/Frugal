@@ -22,6 +22,12 @@ router.get('/:budgetId', budgetsCtrl.show)
 // POST localhost:3000/budgets/:budgetId/expenses
 router.post('/:budgetId/expenses', isLoggedIn, budgetsCtrl.addExpense)
 
+// GET localhost:3000/budgets/:budgetId/edit
+router.get('/:budgetId/edit', isLoggedIn, budgetsCtrl.edit)
+
+// POST localhost:3000/budgets/:budgetId
+router.put('/:budgetId', isLoggedIn, budgetsCtrl.update)
+
 export {
   router
 }
