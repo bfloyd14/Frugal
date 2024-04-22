@@ -8,7 +8,7 @@
       <label for="name-input">Name of Budget:</label>
       <input type="text" name="name" id="name-input" value="<%= budget.name %>">
       <label for="income-input">Monthly Budget Amount:</label>
-      <input type="currency" name="income" id="income-input" value="<%= budget.income %>">
+      <input type="number" name="income" id="income-input" value="<%= budget.income %>">
       <label for="purpose-textarea">Purpose/Goal:</label>
       <textarea type="text" name="purpose" id="purpose-textarea" value="<%= budget.purpose %>"></textarea>
       <button id="save-btn" type="submit">Save Budget</button>

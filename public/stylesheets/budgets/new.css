@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-#name-input, #income-input, #purpose-textarea{
+#name-input, #income-input, #month-input, #purpose-textarea{
   margin: 0 0 50px 0;
 }
 

@@ -5,7 +5,7 @@
   <h1><%= title %></h1>
   <% if (user){ %>
   <h2><%= budget.name %></h2>
-  <h2><%= budget.income %></h2>
+  <h2>$<%= budget.income.toLocaleString() %></h2>
   <% } %>
 
 <a href="/budgets/<%= budget._id %>/edit">
@@ -26,25 +26,24 @@
     <select name="type" id="expense-type-input">
       <option value="Fixed">Fixed Costs</option>
       <option value="Planned">Planned Spending</option>
-      <option value="Savings">Savings</option>
+      <option value="Savings">Monthly Savings</option>
     </select>
     <label for="cost-input">Cost:</label>
     <input type="number" name="cost" id="cost-input">
     <button type="submit">Add Expense</button>
   </form>
   <h2>Goal</h2>
-  <p><%= budget.purpose %></p>
-  <table id="your-budget">
-    <thead>
-      <tr>
-        <th>Fixed Costs</th>
-        <th>Planned Spending</th>
-        <th>Monthly Savings</th>
-      </tr>
-    </thead>
-    <tbody>
-      <select name="" id=""></select>
-    </tbody>
+    <p><%= budget.purpose %></p>
+  <div class="fixed-cost-container">
+    <div id="fixed-cost">Fixed Cost</div>
+  </div>
+  <div class="planned-spending-container">
+    <div id="planned-spending">Planned Spending</div>
+  </div>
+  <div class="savings-container">
+    <div id="div">Monthly Savings</div>
+  </div>
+  
 
 
 

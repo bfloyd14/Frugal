@@ -14,6 +14,7 @@ const expenseSchema = new Schema({
 const budgetSchema = new Schema({
   name: String,
   expenses: [expenseSchema],
+  month: String,
   income: {
     type: Number,
     min: 1

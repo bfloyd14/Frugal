@@ -12,8 +12,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Amount $</th>
-      <th>Date Created</th>
+      <th>Amount</th>
+      <th>Month</th>
       <th>Purpose</th>
       <th>Details</th>
       <th>Delete Budget</th>
@@ -23,8 +23,8 @@
     <% budgets.forEach(budget => { %>
       <tr>
         <td><%= budget.name %></td>
-        <td><%= budget.income %></td>
-        <td><%= budget.timestamps %></td>
+        <td>$<%= budget.income.toLocaleString() %></td>
+        <td><%= budget.month %></td>
         <td><%= budget.purpose %></td>
         <td><a href="/budgets/<%= budget._id %>"><button>Details</button></a></td>
         <td>
