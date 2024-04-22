@@ -75,7 +75,7 @@ function edit(req, res){
   .then(budget =>{
     res.render('budgets/edit',{
       budget,
-      title: 'Edit your Budget'
+      title: 'Edit Budget'
     })
   })
   .catch(err =>{

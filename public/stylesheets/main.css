@@ -47,10 +47,6 @@ nav > a:hover {
   background-color: #424748;
 }
 
-nav > a.active {
-  color: white;
-}
-
 #logout-btn {
   border-radius: 6px;
 }

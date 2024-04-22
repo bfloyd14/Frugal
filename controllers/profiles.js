@@ -15,6 +15,9 @@ function show(req, res){
 }
 
 function update(req, res){
+  for (let key in req.body){
+    if(req.body[key] === '') delete req.body[key]
+  }
   Profile.findByIdAndUpdate(req.params.profileId, req.body, {new: true})
   .then(profile =>{
     res.redirect(`/profiles/${profile._id}`)
@@ -39,9 +42,19 @@ function edit(req, res){
   })
 }
 
+function index(req, res){
+  Profile.find({})
+  .then(profile =>{
+    res.render('profiles/index',{
+      profile,
+      title: 'My Profile'
+    })
+  })
+}
+
 export{
   show,
   update,
   edit,
-
+  index,
 }

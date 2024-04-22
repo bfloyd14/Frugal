@@ -1,11 +1,18 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/budgets/edit.css">
 <%- include('../partials/nav') %>
 
-<label for="name-input">Name of Budget:</label>
-<input type="text" name="name" id="name-input">
-<label for="income-input">Monthly Budget Amount:</label>
-<input type="currency" name="income" id="income-input">
-<label for="purpose-textarea">Purpose/Goal:</label>
-<input type="textarea" name="purpose" id="purpose-textarea">
-
+<h1><%= title %></h1>
+<div class="edit-container">
+  <form action="/budgets/<%= budget._id %>?_method=PUT" method="post">
+      <label for="name-input">Name of Budget:</label>
+      <input type="text" name="name" id="name-input" value="<%= budget.name %>">
+      <label for="income-input">Monthly Budget Amount:</label>
+      <input type="currency" name="income" id="income-input" value="<%= budget.income %>">
+      <label for="purpose-textarea">Purpose/Goal:</label>
+      <textarea type="text" name="purpose" id="purpose-textarea" value="<%= budget.purpose %>"></textarea>
+      <button id="save-btn" type="submit">Save Budget</button>
+    </form>
+  </div>
+  
 <%- include('../partials/footer') %>
