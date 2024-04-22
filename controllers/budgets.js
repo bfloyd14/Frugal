@@ -55,11 +55,26 @@ function show(req, res){
   })
 }
 
+function addExpense(req, res){
+  Budget.find(req.params.budgetId)
+  .then(budget =>{
+    budget.expenses.push(req.body)
+    budget.save()
+    .then(()=>{
+      res.redirect(`/budgets/${budget.id}`)
+    })
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/budgets')
+  })
+}
+
 export {
   newBudget as new,
   create,
   index,
   deleteBudget as delete,
   show,
-
+  addExpense,
 }

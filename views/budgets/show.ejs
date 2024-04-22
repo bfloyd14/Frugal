@@ -7,16 +7,36 @@
   <h2><%= budget.name %></h2>
   <h2><%= budget.income %></h2>
   <% } %>
+
+<h3>New Expense</h3>
+    <form 
+    id="add-expense-form"
+    action="/budgets/<%= budget._id %>/expenses" 
+    method="POST"
+    >
+    <label for="expense-input">Expense Name:</label>
+    <input type="text" name="name" id="expense-input">
+    <label for="expense-type-input">Type of Expense:</label>
+    <select name="type" id="expense-type-input">
+      <option value="Fixed">Fixed Costs</option>
+      <option value="Planned">Planned Spending</option>
+      <option value="Savings">Savings</option>
+    </select>
+    <label for="cost-input">Cost:</label>
+    <input type="text" name="cost" id="cost-input">
+    <button type="submit">Add Expense</button>
+  </form>
   <table id="your-budget">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Date Created</th>
-        <th>Purpose</th>
-        <th>Details</th>
-        <th>Delete Budget</th>
+        <th>Fixed Costs</th>
+        <th>Planned Spending</th>
+        <th>Savings</th>
       </tr>
     </thead>
+    <tbody>
+      <select name="" id=""></select>
+    </tbody>
 
 
 

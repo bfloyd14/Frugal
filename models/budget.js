@@ -2,9 +2,18 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const expenseSchema = new Schema({
+  name: String,
+  type: {
+    String,
+    enum: ['Fixed', 'Planned', 'Savings']
+  },
+  cost: Number,
+})
+
 const budgetSchema = new Schema({
   name: String,
-  expenses: String,
+  expenses: [expenseSchema],
   income: {
     type: Number,
     min: 1

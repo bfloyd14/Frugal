@@ -19,6 +19,9 @@ router.delete('/:budgetId', isLoggedIn, budgetsCtrl.delete)
 // GET localhost:3000/budgets/:budgetId
 router.get('/:budgetId', budgetsCtrl.show)
 
+// POST localhost:3000/budgets/:budgetId/expenses
+router.post('/:budgetId/expenses', isLoggedIn, budgetsCtrl.addExpense)
+
 export {
   router
 }
