@@ -16,11 +16,6 @@
   <button id="edit-btn">Edit</button>
   </a>
 <h3>New Expense</h3>
-    <form 
-    id="add-expense-form"
-    action="/budgets/<%= budget._id %>?_method=PUT" 
-    method="POST"
-    >
     <label for="expense-input">Expense Name:</label>
     <input type="text" name="name" id="expense-input">
     <label for="expense-type-input">Type of Expense:</label>
@@ -31,21 +26,45 @@
     </select>
     <label for="cost-input">Cost:</label>
     <input type="number" name="cost" id="cost-input">
+    <form 
+    id="add-expense-form"
+    action="/budgets/<%= budget._id %>/expenses" 
+    method="POST"
+    >
     <button id="add-expense-btn" type="submit">Add Expense</button>
   </form>
-  <div class="expense-field-container">
-    <% budget.expenses.forEach(expense => { %>
-      <%= budget.name %> <%= budget.cost %>
+  <div class="expense-table-container">
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Fixed Cost</th>
+          <th>Planned Spending</th>
+          <th>Monthly Savings</th>
+          <th>Delete Expense</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% budget.expenses.forEach(expense => { %>
+        <tr>
+          <td><%= expense.name %></td>
+          <td><%= expense.type %></td>
+          <td><%= expense.cost %></td>
+          <td>
+            <form action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete Expense</button>
+            </form>
+            </td>
+          <td>
+            <a href="/budgts/:budgetId/expenses/:expenseId/edit">
+              <button>Edit</button>
+            </a>
+          </td>
     <% }) %>
-    <div class="fixed-cost-container">
-    <div id="fixed-cost">Fixed Cost</div>
-  </div>
-  <div class="planned-spending-container">
-    <div id="planned-spending">Planned Spending</div>
-  </div>
-  <div class="savings-container">
-    <div id="div">Monthly Savings</div>
-    </div>
+    <div class="fixed-cost-container"></div>
+      </tr>
+    </tbody>
+    </table>
   </div>
   
 

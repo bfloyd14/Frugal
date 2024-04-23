@@ -25,7 +25,7 @@ function index(req, res){
   .then(budgets =>{
     res.render('budgets/index', {
       budgets,
-      title: `Your Budget`
+      title: ''
     })
   })
 }
@@ -46,7 +46,7 @@ function show(req, res){
   .then(budget =>{
     res.render('budgets/show',{
       budget,
-      title: '',
+      title: 'Budget',
     })
   })
   .catch(err =>{
@@ -56,7 +56,7 @@ function show(req, res){
 }
 
 function addExpense(req, res){
-  Budget.find(req.params.budgetId)
+  Budget.findById(req.params.budgetId)
   .then(budget =>{
     budget.expenses.push(req.body)
     budget.save()
@@ -98,6 +98,19 @@ function update(req, res){
     })
 }
 
+function deleteExpense(req, res){
+  Budget.findById(req.params.budgetId)
+  .then(budget =>{
+    budget.expenses.remove({_id: req.params.expenseId})
+    budget.save()
+  res.redirect('/budgets/:budgetId')
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/')
+    })
+}
+
 export {
   newBudget as new,
   create,
@@ -107,4 +120,5 @@ export {
   addExpense,
   edit,
   update,
+  deleteExpense,
 }

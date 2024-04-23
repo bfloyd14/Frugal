@@ -28,6 +28,9 @@ router.get('/:budgetId/edit', isLoggedIn, budgetsCtrl.edit)
 // POST localhost:3000/budgets/:budgetId
 router.put('/:budgetId', isLoggedIn, budgetsCtrl.update)
 
+// DELETE localhost:3000/budgets/:budgetId
+router.delete('/:budgetId/expenses/:expenseId', isLoggedIn, budgetsCtrl.deleteExpense)
+
 export {
   router
 }
