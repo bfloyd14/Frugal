@@ -46,7 +46,7 @@ function show(req, res){
   .then(budget =>{
     res.render('budgets/show',{
       budget,
-      title: 'Budget',
+      title: 'View Budget',
     })
   })
   .catch(err =>{

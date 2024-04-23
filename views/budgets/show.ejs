@@ -7,7 +7,7 @@
   <h1><%= title %></h1>
   <% if (user){ %>
   <h2><%= budget.name %></h2>
-  <h2>Goal</h2>
+  <h3>Goal</h3>
     <p><%= budget.purpose %></p>
   </div>
   <h2>$<%= budget.income.toLocaleString() %></h2>
@@ -37,8 +37,9 @@
     <table id="table">
       <thead>
         <tr>
-          <th>Fixed Cost</th>
-          <th>Planned Spending</th>
+          <th>Expense</th>
+          <th>Type of Expense</th>
+          <th>Cost</th>
           <th>Monthly Savings</th>
           <th>Delete Expense</th>
           <th>Edit</th>
@@ -50,18 +51,18 @@
           <td><%= expense.name %></td>
           <td><%= expense.type %></td>
           <td><%= expense.cost %></td>
+          <td><%= expense.savings %></td>
           <td>
             <form action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" method="POST">
-              <button type="submit">Delete Expense</button>
+              <button id="delete-expense-btn" type="submit">Delete Expense</button>
             </form>
             </td>
           <td>
-            <a href="/budgts/:budgetId/expenses/:expenseId/edit">
-              <button>Edit</button>
+            <a href="/budgets/:budgetId/expenses/:expenseId/edit">
+              <button id="edit-expense-btn">Edit</button>
             </a>
           </td>
     <% }) %>
-    <div class="fixed-cost-container"></div>
       </tr>
     </tbody>
     </table>
