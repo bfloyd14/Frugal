@@ -10,8 +10,19 @@
   <h3>Goal</h3>
     <p><%= budget.purpose %></p>
   </div>
-  <h2>$<%= budget.income.toLocaleString() %></h2>
+  <div class="budget-income-container">
+    <div id="budget-income">
+      <h2>
+        <% let income = budget.income %> 
+        <% let total %>
+        <% budget.expenses.forEach(expense=>{%>
+          <% income -= expense.cost %>
+        <% }) %>
+        $<%= income %>
+      </h2>
   <% } %>
+    </div>
+  </div>
   <a href="/budgets/<%= budget._id %>/edit">
   <button id="edit-btn">Edit</button>
   </a>
@@ -35,7 +46,7 @@
   </form>
 </div>
   <div class="expense-table-container">
-    <table id="table">
+    <table id="expense-table">
       <thead>
         <tr>
           <th>Expense</th>
@@ -66,9 +77,5 @@
     </tbody>
     </table>
   </div>
-  
-
-
-
 
 <%- include('../partials/footer') %>
