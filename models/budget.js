@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 
 const expenseSchema = new Schema({
   name: String,
-  type: {
-    String,
-    enum: ['Fixed', 'Planned', 'Savings']
+  expenseType: {
+    type: String,
+    enum: ['Fixed Costs', 'Planned Spending']
   },
   cost: Number,
 })

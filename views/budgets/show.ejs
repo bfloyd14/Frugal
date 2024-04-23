@@ -15,24 +15,25 @@
   <a href="/budgets/<%= budget._id %>/edit">
   <button id="edit-btn">Edit</button>
   </a>
-<h3>New Expense</h3>
-    <label for="expense-input">Expense Name:</label>
-    <input type="text" name="name" id="expense-input">
-    <label for="expense-type-input">Type of Expense:</label>
-    <select name="type" id="expense-type-input">
-      <option value="Fixed">Fixed Costs</option>
-      <option value="Planned">Planned Spending</option>
-      <option value="Savings">Monthly Savings</option>
-    </select>
-    <label for="cost-input">Cost:</label>
-    <input type="number" name="cost" id="cost-input">
-    <form 
+<div class="add-expense-container">
+  <h3>Add Expense</h3>
+  <form 
     id="add-expense-form"
     action="/budgets/<%= budget._id %>/expenses" 
     method="POST"
     >
-    <button id="add-expense-btn" type="submit">Add Expense</button>
+    <label for="expense-input">Expense Name:</label>
+    <input type="text" name="name" id="expense-input">
+    <label for="expense-type-input">Type of Expense:</label>
+    <select name="expenseType" id="expense-type-input">
+      <option value="Fixed Costs">Fixed Costs</option>
+      <option value="Planned Spending">Planned Spending</option>
+      </select>
+    <label for="cost-input">Cost:</label>
+    <input type="number" name="cost" id="cost-input">
+      <button id="add-expense-btn" type="submit">Add Expense</button>
   </form>
+</div>
   <div class="expense-table-container">
     <table id="table">
       <thead>
@@ -40,7 +41,6 @@
           <th>Expense</th>
           <th>Type of Expense</th>
           <th>Cost</th>
-          <th>Monthly Savings</th>
           <th>Delete Expense</th>
           <th>Edit</th>
         </tr>
@@ -49,9 +49,8 @@
         <% budget.expenses.forEach(expense => { %>
         <tr>
           <td><%= expense.name %></td>
-          <td><%= expense.type %></td>
+          <td><%= expense.expenseType %></td>
           <td><%= expense.cost %></td>
-          <td><%= expense.savings %></td>
           <td>
             <form action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" method="POST">
               <button id="delete-expense-btn" type="submit">Delete Expense</button>
