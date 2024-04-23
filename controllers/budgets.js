@@ -10,6 +10,7 @@ function create(req, res){
   for(let key in req.body){
     if(req.body[key] === '') delete req.body[key]
   }
+  req.body.owner = req.user.profile._id
   Budget.create(req.body)
   .then(budget =>{
     res.redirect('/budgets')
@@ -136,7 +137,7 @@ function editExpense(req, res){
   .then(budget =>{
     const expense = budget.expenses.id(req.params.expenseId)
     console.log(budget)
-    if (expense._id.equals(req.budget.owner)){
+    if (budget.owner._id.equals(req.user.profile._id)){
       res.render('budgets/editExpense',{
         budget,
         expense,
