@@ -103,9 +103,15 @@ function deleteExpense(req, res){
   .then(budget =>{
     budget.expenses.remove({_id: req.params.expenseId})
     budget.save()
-  res.redirect('/budgets/:budgetId')
-  })
-  .catch(err =>{
+      .then(() =>{
+        res.redirect(`/budgets/${budget._id}`)
+      })
+      .catch(err =>{
+        console.log(err)
+        res.redirect('/')
+        })
+    })
+    .catch(err =>{
     console.log(err)
     res.redirect('/')
     })
