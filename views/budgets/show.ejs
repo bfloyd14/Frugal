@@ -24,7 +24,7 @@
     </div>
   </div>
   <a href="/budgets/<%= budget._id %>/edit">
-  <button id="edit-btn">Edit</button>
+  <button id="edit-btn">Edit Budget</button>
   </a>
 <div class="add-expense-container">
   <h3>Add Expense</h3>
@@ -59,7 +59,7 @@
       <tbody>
         <% budget.expenses.forEach(expense => { %>
         <tr>
-          <td><%= expense.name %></td>
+          <td><input type="text"><%= expense.name %></td>
           <td><%= expense.expenseType %></td>
           <td>$<%= expense.cost %></td>
           <td>

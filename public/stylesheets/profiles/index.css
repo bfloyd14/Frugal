@@ -6,10 +6,9 @@
 }
 
 #edit-profile-btn {
-  font-size: 16px;
   border-radius: 6px;
   background-color: rgb(61, 70, 61);
   color: white;
   font-weight: bold ;
-  margin: 20px;
+  font-size: 16px;
 }

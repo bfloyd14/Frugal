@@ -2,19 +2,21 @@
 <link rel="stylesheet" href="/stylesheets/profiles/edit.css">
 <%- include('../partials/nav') %>
 
+<div class="save-profile-container">
 <h1><%= title %></h1>
-<form 
-id="edit-form"
-action="/profiles/<%= profile._id %>?_method=PUT" 
-method="POST">
-<label for="name">Name:</label>
-<input type="text" name="name" id="name-input" value="<%= profile.name %>">
-<label for="email">Email:</label>
-<input type="email" name="email" id="email-input" value="<%= user.email %> "readonly="readonly">
-<label for="avatar">Avatar:</label>
-<input type="text" name="avatar" id="avatar-input" value="<%= profile.avatar %>">
-<button id="save-btn" type="submit">Save Profile</button>
-</form>
+  <form 
+  id="edit-form"
+  action="/profiles/<%= profile._id %>?_method=PUT" 
+  method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name-input" value="<%= profile.name %>">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email-input" value="<%= user.email %> "readonly="readonly">
+    <label for="avatar">Avatar:</label>
+    <input type="text" name="avatar" id="avatar-input" value="<%= profile.avatar %>">
+    <button id="save-btn" type="submit">Save Profile</button>
+  </form>
+</div>
 
 
 <%- include('../partials/footer') %>

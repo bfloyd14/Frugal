@@ -1,3 +1,17 @@
 #save-btn {
   border-radius: 6px;
+  background-color: rgb(61, 70, 61);
+  color: white;
+  font-weight: bold ;
+  font-size: 16px;
+}
+
+
+h1 {
+  text-align: center;
+}
+.save-profile-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

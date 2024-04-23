@@ -31,7 +31,11 @@ router.put('/:budgetId', isLoggedIn, budgetsCtrl.update)
 // DELETE localhost:3000/budgets/:budgetId/expenses/:expenseId
 router.delete('/:budgetId/expenses/:expenseId', isLoggedIn, budgetsCtrl.deleteExpense)
 
-// GET localhost:3000/budgets/:budgetId/
+// PUT localhost:3000/budgets/:budgetId/expenses/:expenseId
+router.put('/:budgetId/expenses/:expenseId', isLoggedIn, budgetsCtrl.updateExpense)
+
+// GET localhost:3000/budgets/:budgetId/expenses/:expenseId/edit
+router.get('/:budgetId/expenses/:expenseId/edit', isLoggedIn, budgetsCtrl.editExpense)
 
 export {
   router
