@@ -134,14 +134,21 @@ function updateExpense(req, res){
 function editExpense(req, res){
   Budget.findById(req.params.budgetId)
   .then(budget =>{
-    res.render(`budgets/edit`,{
-      budget,
-      title: ''
-    })
+    const expense = budget.expenses.id(req.params.expenseId)
+    console.log(budget)
+    if (expense._id.equals(req.budget.owner)){
+      res.render('budgets/editExpense',{
+        budget,
+        expense,
+        title: 'Update Expense'
+      })
+    } else {
+      throw new Error(' Not allowed ')
+    }
   })
   .catch(err =>{
     console.log(err)
-    res.redirect('/')
+    res.redirect('/budgets')
     })
 }
 

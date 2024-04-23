@@ -59,7 +59,7 @@
       <tbody>
         <% budget.expenses.forEach(expense => { %>
         <tr>
-          <td><input type="text"><%= expense.name %></td>
+          <td><%= expense.name %></td>
           <td><%= expense.expenseType %></td>
           <td>$<%= expense.cost %></td>
           <td>
@@ -68,7 +68,7 @@
             </form>
             </td>
           <td>
-            <a href="/budgets/:budgetId/expenses/:expenseId/edit">
+            <a href="/budgets/<%= budget._id  %>/expenses/<%= expense._id %>/edit">
               <button id="edit-expense-btn">Edit</button>
             </a>
           </td>

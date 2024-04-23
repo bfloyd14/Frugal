@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="/stylesheets/budgets/edit.css">
 <%- include('../partials/nav') %>
 
+<div class="edit-container"></div>
 <h1><%= title %></h1>
-<div class="edit-container">
   <form action="/budgets/<%= budget._id %>?_method=PUT" method="post">
       <label for="name-input">Name of Budget:</label>
       <input type="text" name="name" id="name-input" value="<%= budget.name %>">
