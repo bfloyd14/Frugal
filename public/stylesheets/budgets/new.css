@@ -11,5 +11,9 @@
 }
 
 #add-budget-btn {
+  font-size: 16px;
   border-radius: 6px;
+  background-color: rgb(61, 70, 61);
+  color: white;
+  font-weight: bold ;
 }
