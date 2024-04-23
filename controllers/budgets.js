@@ -30,7 +30,7 @@ function index(req, res){
   })
 }
 
-function deleteBudget(res,req){
+function deleteBudget(req,res){
   Budget.findByIdAndDelete(req.params.budgetId)
   .then(budget =>{
     res.redirect('/budgets')

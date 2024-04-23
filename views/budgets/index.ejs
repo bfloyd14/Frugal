@@ -27,10 +27,15 @@
         <td>$<%= budget.income.toLocaleString() %></td>
         <td><%= budget.month %></td>
         <td><%= budget.purpose %></td>
-        <td><a href="/budgets/<%= budget._id %>"><button id="details-btn">Details</button></a></td>
         <td>
-          <form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
-          <button id="delete-btn" type="submit">Delete Budget</button>
+          <a href="/budgets/<%= budget._id %>">
+            <button id="details-btn">Details</button>
+          </a>
+        </td>
+        <td>
+          <form action="/budgets/<%= budget._id %>?_method=DELETE" 
+            method="POST">
+            <button id="delete-btn" type="submit">Delete</button>
           </form>
         </td>
       </tr>
