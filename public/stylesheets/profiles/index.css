@@ -1,8 +1,18 @@
+.index-profile-container {
+  display: flex;
+  justify-content: center;
+}
 .edit-profile-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+  padding-bottom: 40px;
+  width: 400px;
 }
 
 #edit-profile-btn {
@@ -11,4 +21,5 @@
   color: white;
   font-weight: bold ;
   font-size: 16px;
+  margin-top: 20px;
 }

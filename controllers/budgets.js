@@ -136,7 +136,6 @@ function editExpense(req, res){
   Budget.findById(req.params.budgetId)
   .then(budget =>{
     const expense = budget.expenses.id(req.params.expenseId)
-    console.log(budget)
     if (budget.owner._id.equals(req.user.profile._id)){
       res.render('budgets/editExpense',{
         budget,
