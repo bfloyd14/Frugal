@@ -49,6 +49,32 @@
   font-weight: bold;
 }
 
+#budget-income {
+  margin-top: 10px;
+}
+
+.add-expense-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-expense{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#add-expense-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  text-align: center;
+  margin-top: 10px;
+}
+
 #edit-btn, #add-expense-btn, #delete-expense-btn, #edit-expense-btn {
   font-size: 16px;
   border-radius: 6px;
@@ -57,6 +83,24 @@
   font-weight: bold ;
 }
 
+#add-expense-btn {
+  margin: 15px;
+}
 table {
   font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#list td:nth-child(2),
+#list td:nth-child(3) {
+  min-width: 100px;
 }
