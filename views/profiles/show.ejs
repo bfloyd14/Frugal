@@ -2,16 +2,18 @@
 <link rel="stylesheet" href="/stylesheets/profiles/show.css">
 <%- include('../partials/nav') %>
 
+<div class="index-profile-container">
   <div class="edit-profile-container">
     <h1><%= title %></h1>
       <h3>Name:</h3> 
-      <h4><%= user.profile.name %></h4>
+      <div id="name-input"><%= user.profile.name %></div>
       <h3>Email:</h3>
-      <h4><%= user.email %></h4>
+      <div id="email-input"><%= user.email %></div>
       <h3>Avatar:</h3>
       <img src=<%= user.profile.avatar %>>
       <a href="/profiles/<%= profile._id %>/edit">
         <button id="edit-profile-btn">Edit Profile</button>
       </a>  
-    </div>
+  </div>
+</div>
 <%- include('../partials/footer') %>
