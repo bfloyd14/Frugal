@@ -3,13 +3,17 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div class="budget-container">
-  <h1><%= title %></h1>
   <% if (user){ %>
-  <h2><%= budget.name %></h2>
-  <h3>Goal</h3>
-    <p><%= budget.purpose %></p>
+  <div class="budget-container">
+    <div id="title"><%= budget.name %> <%= title %></div>
+  <a href="/budgets/<%= budget._id %>/edit">
+    <button id="edit-btn">Edit Budget</button>
+    </a>
   </div>
+  <div class="goal-container">
+  <h3>Goal: </h3>
+  <div id="purpose-show"><%= budget.purpose %></div>  
+</div>
   <div class="budget-income-container">
     <div id="budget-income">
       <h2>
@@ -20,12 +24,8 @@
         <% }) %>
         $<%= income %>
       </h2>
-  <% } %>
     </div>
   </div>
-  <a href="/budgets/<%= budget._id %>/edit">
-  <button id="edit-btn">Edit Budget</button>
-  </a>
 <div class="add-expense-container">
   <h3>Add Expense</h3>
   <form 
@@ -76,6 +76,7 @@
       </tr>
     </tbody>
     </table>
+  <% } %>
   </div>
 
 <%- include('../partials/footer') %>

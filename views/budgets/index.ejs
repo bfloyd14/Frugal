@@ -5,10 +5,6 @@
 <main>
 <h1><%= title %></h1>
 <% if (user){ %>
-<h2><%= user.profile.name %>'s frugal</h2>
-<% } %>
-
-
 <table id="index-budget">
   <thead>
     <tr>
@@ -41,6 +37,7 @@
       </tr>
   </tbody>
   <% }) %>
+<% } %>
 </main>
 
 <%- include('../partials/footer') %>

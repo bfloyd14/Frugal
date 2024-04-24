@@ -26,7 +26,7 @@ function index(req, res){
   .then(budgets =>{
     res.render('budgets/index', {
       budgets,
-      title: ''
+      title: req.user.profile.name + ' Budgets'
     })
   })
 }
@@ -47,7 +47,7 @@ function show(req, res){
   .then(budget =>{
     res.render('budgets/show',{
       budget,
-      title: 'View Budget',
+      title: 'Budget',
     })
   })
   .catch(err =>{
