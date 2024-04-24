@@ -7,6 +7,7 @@
   width: 150px;
   height: 25px;
   margin-left: 35px;
+  margin-top: 25px;
 }
 
 .save-profile-container{
@@ -37,6 +38,7 @@
 #title {
   font-size: 36px;
   font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .my-profile-save-container {
