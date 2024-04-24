@@ -86,6 +86,13 @@
 #add-expense-btn {
   margin: 15px;
 }
+
+.expense-table-container {
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+}
+
 table {
   font-size: 20px;
 }
