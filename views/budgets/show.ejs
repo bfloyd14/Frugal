@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/budgets/show.css">
 <%- include('../partials/nav') %>
 
-<main>
+<div class="show-container">
   <% if (user){ %>
   <div class="budget-container">
     <div id="title"><%= budget.name %> <%= title %></div>
@@ -76,5 +76,6 @@
     </table>
   <% } %>
   </div>
+</div>
 
 <%- include('../partials/footer') %>
