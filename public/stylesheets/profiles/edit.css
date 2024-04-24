@@ -18,7 +18,7 @@
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
   padding-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 30px;
   width: 400px;
 }
 
@@ -33,6 +33,7 @@
   margin: 25px;
   border-radius: 2px;
 }
+
 
 
 .my-profile-save-container {

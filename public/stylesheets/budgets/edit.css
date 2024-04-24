@@ -3,6 +3,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+  width: 400px;
+  padding-top: 30px;
+  padding-bottom: 40px;;
+}
+
+.budget-edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#name-input, #income-input, #purpose-textare {
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+#edit-budget-form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 #save-btn {
@@ -11,4 +36,11 @@
   background-color: rgb(61, 70, 61);
   color: white;
   font-weight: bold ;
+  margin-top: 25px;
+}
+
+#title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }

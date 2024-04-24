@@ -2,17 +2,19 @@
 <link rel="stylesheet" href="/stylesheets/budgets/edit.css">
 <%- include('../partials/nav') %>
 
-<div class="edit-container">
-<h1><%= title %></h1>
-  <form action="/budgets/<%= budget._id %>?_method=PUT" method="post">
-      <label for="name-input">Name of Budget:</label>
-      <input type="text" name="name" id="name-input" value="<%= budget.name %>">
-      <label for="income-input">Monthly Budget Amount:</label>
-      <input type="number" name="income" id="income-input" value="<%= budget.income %>">
-      <label for="purpose-textarea">Purpose/Goal:</label>
-      <textarea type="text" name="purpose" id="purpose-textarea" cols="30" rows="10" value="<%= budget.purpose %>"></textarea>
-      <button id="save-btn" type="submit">Save Budget</button>
-    </form>
+<div class="budget-edit-container">
+  <div class="edit-container">
+    <div id="title"><%= title %></div>
+      <form id="edit-budget-form" action="/budgets/<%= budget._id %>?_method=PUT" method="post">
+          <label for="name-input">Name of Budget:</label>
+          <input type="text" name="name" id="name-input" value="<%= budget.name %>">
+          <label for="income-input">Monthly Budget Amount:</label>
+          <input type="number" name="income" id="income-input" value="<%= budget.income %>">
+          <label for="purpose-textarea">Purpose/Goal:</label>
+          <textarea type="text" name="purpose" id="purpose-textarea" cols="30" rows="10" value="<%= budget.purpose %>"></textarea>
+          <button id="save-btn" type="submit">Save Budget</button>
+        </form>
   </div>
+</div>
   
 <%- include('../partials/footer') %>

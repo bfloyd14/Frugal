@@ -22,12 +22,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   margin-bottom: 40px;
 }
 
 #name-input, #income-input, #month-input, #purpose-textarea{
-  margin: 0 0 50px 0;
   border-radius: 2px;
 }
 
