@@ -11,19 +11,17 @@
     </a>
   </div>
   <div class="goal-container">
-  <h3>Goal: </h3>
+  <div id="goal-show">Goal:</div>  
   <div id="purpose-show"><%= budget.purpose %></div>  
 </div>
   <div class="budget-income-container">
     <div id="budget-income">
-      <h2>
         <% let income = budget.income %> 
         <% let total %>
         <% budget.expenses.forEach(expense=>{%>
           <% income -= expense.cost %>
         <% }) %>
         $<%= income %>
-      </h2>
     </div>
   </div>
 <div class="add-expense-container">
