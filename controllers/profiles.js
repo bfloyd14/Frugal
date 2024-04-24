@@ -42,19 +42,9 @@ function edit(req, res){
   })
 }
 
-function index(req, res){
-  Profile.find({})
-  .then(profile =>{
-    res.render('profiles/index',{
-      profile,
-      title: 'My Profile'
-    })
-  })
-}
 
 export{
   show,
   update,
   edit,
-  index,
 }
