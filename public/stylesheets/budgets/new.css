@@ -8,6 +8,13 @@
   border: solid rgb(61, 70, 61);
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
+  width: 400px;
+}
+
+#title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 #new-form {
@@ -15,10 +22,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  margin-bottom: 40px;
 }
 
 #name-input, #income-input, #month-input, #purpose-textarea{
   margin: 0 0 50px 0;
+  border-radius: 2px;
 }
 
 #add-budget-btn {

@@ -4,10 +4,45 @@
   color: white;
   font-weight: bold ;
   font-size: 16px;
+  width: 150px;
+  height: 25px;
+  margin-left: 35px;
 }
 
 .save-profile-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  width: 400px;
+}
+
+#edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#name-input, #email-input, #avatar-input {
+  margin: 25px;
+  border-radius: 2px;
+}
+
+
+.my-profile-save-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#name-text, #email-text, #avatar-text {
+  font-size: 18px;
+  font-weight: bold;
 }
