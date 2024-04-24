@@ -1,19 +1,19 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
-  <h1><%= user ? user.profile.name + ',' : '' %></h1>
-  <h2>Welcome to frugal!</h2>
-  <h3>A Personal Budgeting App</h3>
-  <h4>Let Us Help you Save Up For Your Next Adventure!</h4>
+<img id="title-page-img" src="/public/frugal-title-img.png" alt="home-page-img">
+<div class="home-container">
+  <div id="user-text"><%= user ? user.profile.name + ',' : '' %></div>
+  <div id="welcome-text">Welcome to frugal!</div>
+  <div id="app-text">A Personal Budgeting App</div>
+  <div id="quote-text">Let Us Help you Save Up For Your Next Adventure!</div>
   <% if (user?.profile.avatar) { %>
-    <div>
       <img
+        id="avatar-img"
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %> avatar"
       />
-    </div>
   <% } %>
-</main>
+</div>
 
 <%- include('./partials/footer') %>

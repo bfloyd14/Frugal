@@ -51,25 +51,53 @@ nav > a:hover {
 }
 
 #logout-btn {
-  border-radius: 6px;
+  border: none;
   background-color: rgb(61, 70, 61);
   color: white;
   font-weight: bold ;
   font-size: 16px;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .right {
   margin-left: auto;
 }
 
-img {
+#avatar-img {
   width: 75px;
   height: 75px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#user-text, #welcome-text, #app-text, #quote-text {
+  padding: 20px;
+}
+
+#user-text {
+  font-size: 28px;
+}
+
+#welcome-text {
+  font-size: 32px;
+}
+
+#app-text {
+  font-size: 20px;
+}
+
+#title-page-img {
+  display: flex;
+  justify-content: center;
 }
