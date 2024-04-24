@@ -11,6 +11,12 @@
   width: 400px;
 }
 
+.new-budget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #title {
   font-size: 36px;
   font-weight: bold;

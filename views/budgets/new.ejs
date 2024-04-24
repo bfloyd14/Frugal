@@ -1,7 +1,8 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/budgets/new.css">
 <%- include('../partials/nav') %>
-<main>
+
+<div class="new-budget-container">
   <div class="new-form-container">
     <div id="title"><%= title %></div>
     <form id="new-form" action="/budgets" method="POST">
@@ -16,6 +17,6 @@
       <button id="add-budget-btn" type="submit">Add</button>
     </form>
   </div>
-</main>
+</div>
 
 <%- include('../partials/footer') %>
