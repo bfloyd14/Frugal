@@ -2,44 +2,45 @@
 <link rel="stylesheet" href="/stylesheets/budgets/index.css">
 <%- include('../partials/nav') %>
 
-<main>
+<div class="all-budget-container">
   <div class="index-container">
-<% if (user){ %>
-  <div id="title-index"><%= title %></div>
-  <table id="index-budget">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Month</th>
-        <th>Purpose</th>
-        <th>Details</th>
-        <th>Delete Budget</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% budgets.forEach(budget => { %>
-      <tr>
-        <td><%= budget.name %></td>
-        <td>$<%= budget.income.toLocaleString() %></td>
-        <td><%= budget.month %></td>
-        <td><%= budget.purpose %></td>
-        <td>
-          <a href="/budgets/<%= budget._id %>">
-            <button id="details-btn">View</button>
-          </a>
-        </td>
-        <td>
-          <form action="/budgets/<%= budget._id %>?_method=DELETE" 
-            method="POST">
-            <button id="delete-btn" type="submit">Delete</button>
-          </form>
-        </td>
-      </tr>
-  </tbody>
-  <% }) %>
-<% } %>
+  <% if (user){ %>
+    <div id="title-index"><%= title %></div>
+    <table id="index-budget">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Month</th>
+          <th>Purpose</th>
+          <th>Details</th>
+          <th>Delete Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% budgets.forEach(budget => { %>
+        <tr>
+          <td><%= budget.name %></td>
+          <td>$<%= budget.income.toLocaleString() %></td>
+          <td><%= budget.month %></td>
+          <td><%= budget.purpose %></td>
+          <td>
+            <a href="/budgets/<%= budget._id %>">
+              <button id="details-btn">View</button>
+            </a>
+          </td>
+          <td>
+            <form action="/budgets/<%= budget._id %>?_method=DELETE" 
+              method="POST">
+              <button id="delete-btn" type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+    </tbody>
+    <% }) %>
+  <% } %>
+  </div>
 </div>
-</main>
+
 
 <%- include('../partials/footer') %>

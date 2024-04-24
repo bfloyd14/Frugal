@@ -1,20 +1,23 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/budgets/editExpense.css">
 <%- include('../partials/nav') %>
 
-<div class="update-expense-container"></div>
-<h1><%= title %></h1>
-  <form action="/budgets/<%= budget._id %>/expenses/<%= expense.id %> ?_method=PUT" method="post">
-    <label for="expense-input">Expense Name:</label>
-    <input type="text" name="name" id="expense-input" value="<%= expense.name %>">
-    <label for="expense-type-input">Type of Expense:</label>
-    <select name="expenseType" id="expense-type-input" value="<%= expense.expenseType %>">
-      <option value="Fixed Costs">Fixed Costs</option>
-      <option value="Planned Spending">Planned Spending</option>
-      </select>
-    <label for="cost-input">Cost:</label>
-    <input type="number" name="cost" id="cost-input" value="<%= expense.cost %>">
-      <button id="update-expense-btn" type="submit">Update Expense</button>
-    </form>
+<div class="edit-expense-container">
+  <div class="update-expense-container">
+    <div id="title-text"><%= title %></div>
+    <form id="update-expense-form" action="/budgets/<%= budget._id %>/expenses/<%= expense.id %> ?_method=PUT" method="post">
+      <label for="expense-input">Expense Name:</label>
+      <input type="text" name="name" id="expense-input" value="<%= expense.name %>">
+      <label for="cost-input">Cost:</label>
+      <input type="number" name="cost" id="cost-input" value="<%= expense.cost %>">
+      <label for="expense-type-input">Type of Expense:</label>
+      <select name="expenseType" id="expense-type-input" value="<%= expense.expenseType %>">
+        <option value="Fixed Costs">Fixed Costs</option>
+        <option value="Planned Spending">Planned Spending</option>
+        </select>
+        <button id="update-expense-btn" type="submit">Update Expense</button>
+      </form>
   </div>
+</div>
 
 <%- include('../partials/footer') %>
