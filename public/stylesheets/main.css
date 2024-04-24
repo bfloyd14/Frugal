@@ -79,6 +79,7 @@ button {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  margin-bottom: 75px;
 }
 
 #user-text, #welcome-text, #app-text, #quote-text {
@@ -100,4 +101,8 @@ button {
 #title-page-img {
   display: flex;
   justify-content: center;
+}
+#frugal-logo {
+  font-size: 40px;
+  font-weight: bold;
 }

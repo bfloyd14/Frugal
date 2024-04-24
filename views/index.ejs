@@ -1,7 +1,7 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<img id="title-page-img" src="/public/frugal-title-img.png" alt="home-page-img">
+
 <div class="home-container">
   <div id="user-text"><%= user ? user.profile.name + ',' : '' %></div>
   <div id="welcome-text">Welcome to frugal!</div>
@@ -15,5 +15,6 @@
       />
   <% } %>
 </div>
+<img id="title-page-img" src="../images/frugal-title-img.png" alt="home-page-img">
 
 <%- include('./partials/footer') %>
