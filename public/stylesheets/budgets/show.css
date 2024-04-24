@@ -31,10 +31,22 @@
   font-weight: bold;
 }
 
+.expense-goal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .goal-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+  width: 200px;
 }
 
 #purpose-show {
@@ -46,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 #budget-income {
