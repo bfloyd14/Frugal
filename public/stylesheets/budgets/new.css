@@ -1,3 +1,14 @@
+.new-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  text-align: center;
+  margin-top: 10px;
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+}
 
 #new-form {
   display: flex;

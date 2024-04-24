@@ -2,18 +2,20 @@
 <link rel="stylesheet" href="/stylesheets/budgets/new.css">
 <%- include('../partials/nav') %>
 <main>
-  <h1><%= title %></h1>
-  <form id="new-form" action="/budgets" method="POST">
-    <label for="name-input">Name of Budget:</label>
-    <input type="text" name="name" id="name-input" autocomplete="off">
-    <label for="Month-input">Month:</label>
-    <input type="text" name="month" id="month-input" autocomplete="off">
-    <label for="income-input">Monthly Budget Amount:</label>
-    <input type="number" name="income" id="income-input" autocomplete="off">
-    <label for="purpose-textarea">Purpose/Goal:</label>
-    <input type="textarea" name="purpose" id="purpose-textarea">
-    <button id="add-budget-btn" type="submit">Add Budget</button>
-  </form>
+  <div class="new-form-container">
+    <div id="title"><%= title %></div>
+    <form id="new-form" action="/budgets" method="POST">
+      <label for="name-input">Name of Budget:</label>
+      <input type="text" name="name" id="name-input" autocomplete="off">
+      <label for="Month-input">Month:</label>
+      <input type="text" name="month" id="month-input" autocomplete="off">
+      <label for="income-input">Monthly Budget Amount:</label>
+      <input type="number" name="income" id="income-input" autocomplete="off">
+      <label for="purpose-textarea">Purpose/Goal:</label>
+      <input type="textarea" name="purpose" id="purpose-textarea">
+      <button id="add-budget-btn" type="submit">Add Budget</button>
+    </form>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

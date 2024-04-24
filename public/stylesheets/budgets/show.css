@@ -20,19 +20,19 @@
   margin-top: 10px;
 }
 
+#goal-show {
+  font-weight: bold;
+}
+
 .goal-container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#goal-show {
-  font-size: 18px;
-  font-weight: bold;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 #purpose-show {
   margin: 2px 0 0 5px ;
+  font-size: 18px;
 }
 
 .budget-container{
@@ -45,12 +45,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
-  font-weight: bold;
 }
 
 #budget-income {
   margin-top: 10px;
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .add-expense-container {
@@ -58,21 +58,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+  width: 200px;
 }
 
 #add-expense{
   font-size: 18px;
   font-weight: bold;
-  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 #add-expense-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: space-evenly;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 10px;
+}
+
+#expense-input, #expense-type-input, #cost-input {
+  border-radius: 6px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #edit-btn, #add-expense-btn, #delete-expense-btn, #edit-expense-btn {
@@ -91,6 +104,7 @@
   border: solid rgb(61, 70, 61);
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
+  margin-top: 25px;
 }
 
 table {

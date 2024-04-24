@@ -7,13 +7,9 @@
   <div class="budget-container">
     <div id="title"><%= budget.name %> <%= title %></div>
   <a href="/budgets/<%= budget._id %>/edit">
-    <button id="edit-btn">Edit Budget</button>
+    <button id="edit-btn">Edit frugal</button>
     </a>
   </div>
-  <div class="goal-container">
-  <div id="goal-show">Goal:</div>  
-  <div id="purpose-show"><%= budget.purpose %></div>  
-</div>
   <div class="budget-income-container">
     <div id="budget-income">
         <% let income = budget.income %> 
@@ -22,6 +18,10 @@
           <% income -= expense.cost %>
         <% }) %>
         $<%= income %>
+    </div>
+    <div class="goal-container">
+      <div id="goal-show">Goal:</div>  
+      <div id="purpose-show"><%= budget.purpose %></div> 
     </div>
   </div>
 <div class="add-expense-container">
@@ -51,7 +51,7 @@
           <th>Type of Expense</th>
           <th>Cost</th>
           <th>Delete Expense</th>
-          <th>Edit</th>
+          <th>Edit Expense</th>
         </tr>
       </thead>
       <tbody>
