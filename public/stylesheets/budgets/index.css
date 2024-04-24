@@ -1,9 +1,23 @@
+.index-container{
+  border: solid rgb(61, 70, 61);
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px;
+}
+
 #details-btn, #delete-btn {
   font-size: 16px;
   border-radius: 6px;
   background-color: rgb(61, 70, 61);
   color: white;
   font-weight: bold ;
+}
+
+#title-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 table {

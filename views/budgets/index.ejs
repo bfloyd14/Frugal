@@ -3,20 +3,21 @@
 <%- include('../partials/nav') %>
 
 <main>
-<h1><%= title %></h1>
+  <div class="index-container">
 <% if (user){ %>
-<table id="index-budget">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Month</th>
-      <th>Purpose</th>
-      <th>View</th>
-      <th>Delete Budget</th>
-    </tr>
-  </thead>
-  <tbody>
+  <div id="title-index"><%= title %></div>
+  <table id="index-budget">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Month</th>
+        <th>Purpose</th>
+        <th>Details</th>
+        <th>Delete Budget</th>
+      </tr>
+    </thead>
+    <tbody>
     <% budgets.forEach(budget => { %>
       <tr>
         <td><%= budget.name %></td>
@@ -25,7 +26,7 @@
         <td><%= budget.purpose %></td>
         <td>
           <a href="/budgets/<%= budget._id %>">
-            <button id="details-btn">Details</button>
+            <button id="details-btn">View</button>
           </a>
         </td>
         <td>
@@ -38,6 +39,7 @@
   </tbody>
   <% }) %>
 <% } %>
+</div>
 </main>
 
 <%- include('../partials/footer') %>
