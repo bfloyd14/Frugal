@@ -56,6 +56,7 @@ nav > a:hover {
   color: white;
   font-weight: bold ;
   font-size: 16px;
+  margin-right: 20px;
 }
 
 
@@ -67,6 +68,7 @@ nav > a:hover {
   width: 75px;
   height: 75px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 button {
@@ -83,7 +85,7 @@ button {
 }
 
 #user-text, #welcome-text, #app-text, #quote-text {
-  padding: 20px;
+  padding: 10px;
 }
 
 #user-text {
@@ -101,6 +103,9 @@ button {
 #title-page-img {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 450px;
 }
 #frugal-logo {
   font-size: 40px;
