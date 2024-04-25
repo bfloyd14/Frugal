@@ -15,7 +15,7 @@ frugal is a personal budgeting app that allows you to create multiple monthly bu
 - HTML
 - CSS
 - MongoDB
-- JavaScript
+- JavaScript 
 - Whimsical 
 - Trello
 - Fly.io
@@ -23,7 +23,7 @@ frugal is a personal budgeting app that allows you to create multiple monthly bu
 ## Credits
 
 - Favicon Image from [Google](https://Google.com)
-- AI generated image is from [Pixlr](https://pixlr.com/image-generator/)
+- AI generated image from [Pixlr](https://pixlr.com/image-generator/)
 - Icon from [Font Awesome](https://fontawesome.com/)
 
 
