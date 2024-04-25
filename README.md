@@ -21,10 +21,16 @@
 
 ## Credits
 
-- Favicon Image
+- Favicon Image from [Google](https://Google.com)
 - AI generated image is from [Pixlr](https://pixlr.com/image-generator/)
 - Icon from [Font Awesome](https://fontawesome.com/)
 
 
 ## Icebox Items
 
+- Create a noteSchema on the Budget Model
+- Dark Mode
+- A savings goal calculation for each budget
+- Add a second email to profile
+- Delete email from profile
+- Create an export feature
