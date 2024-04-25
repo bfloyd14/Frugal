@@ -26,10 +26,44 @@
         $<%= income %>
     </div>
   </div>
+
 <div class="expense-goal-container">
-  <div class="add-expense-container">
-    <div id="add-expense">Add Expense</div>
-    <form 
+  <div class="expense-table-container">
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Expense</th>
+              <th>Type of Expense</th>
+              <th>Cost</th>
+              <th>Delete Expense</th>
+              <th>Edit Expense</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% budget.expenses.forEach(expense => { %>
+          <tr>
+            <td><%= expense.name %></td>
+            <td><%= expense.expenseType %></td>
+            <td>$<%= expense.cost %></td>
+            <td>
+              <form action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" method="POST">
+                <button id="delete-expense-btn" type="submit">Delete Expense</button>
+              </form>
+            </td>
+            <td>
+              <a href="/budgets/<%= budget._id  %>/expenses/<%= expense._id %>/edit">
+                <button id="edit-expense-btn">Edit</button>
+              </a>
+            </td>
+            <% }) %>
+          </tr>
+        </tbody>
+      </table>
+      <% } %>
+    </div>
+    <div class="add-expense-container">
+      <div id="add-expense">Add Expense</div>
+      <form 
       id="add-expense-form"
       action="/budgets/<%= budget._id %>/expenses" 
       method="POST"
@@ -42,44 +76,10 @@
       <select name="expenseType" id="expense-type-input">
         <option value="Fixed Costs">Fixed Costs</option>
         <option value="Planned Spending">Planned Spending</option>
-        </select>
-        <button id="add-expense-btn" type="submit">Add Expense</button>
+      </select>
+      <button id="add-expense-btn" type="submit">Add Expense</button>
     </form>
-  </div>
-  
-</div>
-  <div class="expense-table-container">
-    <table id="expense-table">
-      <thead>
-        <tr>
-          <th>Expense</th>
-          <th>Type of Expense</th>
-          <th>Cost</th>
-          <th>Delete Expense</th>
-          <th>Edit Expense</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% budget.expenses.forEach(expense => { %>
-        <tr>
-          <td><%= expense.name %></td>
-          <td><%= expense.expenseType %></td>
-          <td>$<%= expense.cost %></td>
-          <td>
-            <form action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" method="POST">
-              <button id="delete-expense-btn" type="submit">Delete Expense</button>
-            </form>
-            </td>
-          <td>
-            <a href="/budgets/<%= budget._id  %>/expenses/<%= expense._id %>/edit">
-              <button id="edit-expense-btn">Edit</button>
-            </a>
-          </td>
-    <% }) %>
-      </tr>
-    </tbody>
-    </table>
-  <% } %>
+    </div>
   </div>
 </div>
 
