@@ -17,6 +17,12 @@
   font-weight: bold;
 }
 
+.show-budget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .budget-container{
   display: flex;
   justify-content: center;
@@ -42,11 +48,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  border: solid rgb(61, 70, 61);
+  border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
-  width: 200px;
+  padding: 20px;
+  text-align: center;
 }
 
 #purpose-show {
@@ -58,13 +64,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
 }
 
 #budget-income {
-  margin-top: 10px;
   font-size: 48px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-expense-container {
@@ -73,7 +80,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  border: solid rgb(61, 70, 61);
+  border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
   width: 200px;
@@ -82,9 +89,8 @@
 #add-expense{
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
-  padding: 20px;
-  padding-bottom: 20px;
+  padding: 15px;
+  padding-bottom: 15px;
 }
 
 #add-expense-form {
@@ -107,7 +113,7 @@
 #edit-btn, #add-expense-btn, #delete-expense-btn, #edit-expense-btn {
   font-size: 16px;
   border-radius: 6px;
-  background-color: rgb(61, 70, 61);
+  background-color: #2a2828;
   color: white;
   font-weight: bold ;
 }
@@ -118,7 +124,7 @@
 }
 
 .expense-table-container {
-  border: solid rgb(61, 70, 61);
+  border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
   margin-top: 25px;
@@ -135,7 +141,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid #2a2828;
 }
 
 table td {

@@ -5,7 +5,7 @@
   align-items: space-evenly;
   text-align: center;
   margin-top: 10px;
-  border: solid rgb(61, 70, 61);
+  border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
   width: 400px;
@@ -45,7 +45,7 @@
 #add-budget-btn {
   font-size: 16px;
   border-radius: 6px;
-  background-color: rgb(61, 70, 61);
+  background-color: #2a2828;
   color: white;
   font-weight: bold ;
 }

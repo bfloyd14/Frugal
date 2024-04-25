@@ -4,6 +4,7 @@
 
 <div class="show-container">
   <% if (user){ %>
+<div class="show-budget-container">
   <div class="budget-container">
     <a href="/budgets/<%= budget._id %>/edit">
       <button id="edit-btn">Edit frugal</button>
@@ -14,6 +15,7 @@
       <div id="purpose-show"><%= budget.purpose %></div> 
     </div>
   </div>
+</div>
   <div class="budget-income-container">
     <div id="budget-income">
         <% let income = budget.income %> 
@@ -23,7 +25,6 @@
         <% }) %>
         $<%= income %>
     </div>
-    
   </div>
 <div class="expense-goal-container">
   <div class="add-expense-container">
