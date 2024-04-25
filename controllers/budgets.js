@@ -22,7 +22,7 @@ function create(req, res){
 }
 
 function index(req, res){
-  Budget.find({})
+  Budget.find({owner: req.user.profile._id})
   .then(budgets =>{
     res.render('budgets/index', {
       budgets,
