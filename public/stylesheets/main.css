@@ -65,8 +65,8 @@ nav > a:hover {
 #avatar-img {
   width: 75px;
   height: 75px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -83,7 +83,7 @@ button {
 }
 
 #user-text, #welcome-text, #app-text, #quote-text {
-  padding: 10px;
+  padding: 5px;
 }
 
 #user-text {
@@ -102,8 +102,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 450px;
+  width: 300px;
+  height: 300px;
 }
 #frugal-logo {
   font-size: 40px;
