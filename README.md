@@ -6,20 +6,24 @@
 
 
 
-##  [Try the frugal App here](https://frugal.fly.dev/)
+## [Try the frugal App here](https://frugal.fly.dev/)
 
 ## [Planning Material](https://trello.com/b/O5zIZM0e/frugal)
 
 ## Technologies Used
 
--HTML
--CSS
--JavaScript
--Whimsical
--Trello
+- HTML
+- CSS
+- JavaScript
+- Whimsical
+- Trello
+- Fly.io
 
 ## Credits
 
+- Favicon Image
+- AI generated image is from [Pixlr](https://pixlr.com/image-generator/)
+- Icon from [Font Awesome](https://fontawesome.com/)
 
 
 ## Icebox Items
