@@ -10,10 +10,6 @@
       <button id="edit-btn">Edit frugal</button>
     </a>
     <div id="title"><%= budget.name %> <%= title %></div>
-    <div class="goal-container">
-      <div id="goal-show">Goal:</div>  
-      <div id="purpose-show"><%= budget.purpose %></div> 
-    </div>
   </div>
 </div>
   <div class="budget-income-container">
@@ -27,7 +23,6 @@
         $<%= income %>
     </div>
   </div>
-
 <div class="show-table-container">
   <div class="add-expense-container">
     <div id="add-expense">Add Expense</div>
@@ -48,7 +43,6 @@
     <button id="add-expense-btn" type="submit">Add Expense</button>
   </form>
   </div>
-</div>
   <div class="expense-table-container">
         <table id="expense-table">
           <thead>
@@ -82,6 +76,12 @@
       </table>
       <% } %>
     </div>
+    <div class="goal-container">
+      <div id="goal-show">Goal:</div>  
+      <div id="purpose-show"><%= budget.purpose %></div> 
+    </div>
+</div>
+
 </div>
 
 <%- include('../partials/footer') %>

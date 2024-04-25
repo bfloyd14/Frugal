@@ -33,30 +33,23 @@
   margin-top: 10px;
 }
 
-#goal-show {
-  font-weight: bold;
-}
-
-.show-table-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .goal-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: solid #2a2828;
+  text-align: center;
+  border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
-  padding: 20px; */
-  text-align: center;
+  padding: 20px;
+}
+#goal-show {
+  font-weight: bold;
+  font-size: 24px;
 }
 
 #purpose-show {
-  margin: 2px 0 0 5px ;
   font-size: 18px;
 }
 
@@ -73,6 +66,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.show-table-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 }
 
 .add-expense-container {
