@@ -48,10 +48,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid #2a2828;
+  /* border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
-  padding: 20px;
+  padding: 20px; */
   text-align: center;
 }
 
@@ -67,7 +67,7 @@
 }
 
 #budget-income {
-  font-size: 48px;
+  font-size: 72px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -128,8 +128,7 @@
   border: solid #2a2828;
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
-  margin-top: 25px;
-  padding: 30px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;

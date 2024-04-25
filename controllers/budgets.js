@@ -57,6 +57,7 @@ function show(req, res){
 }
 
 function addExpense(req, res){
+  req.params.owner = req.user.profile._id
   Budget.findById(req.params.budgetId)
   .then(budget =>{
     budget.expenses.push(req.body)
@@ -122,14 +123,27 @@ function updateExpense(req, res){
   for(let key in req.body){
     if(req.body[key] === '') delete req.body[key]
   }
-  Budget.findByIdAndUpdate(req.params.budgetId, req.body, {new: true})
+  Budget.findById(req.params.budgetId)
   .then(budget =>{
-    res.redirect(`/budgets/${budget._id}`)
+    const expense = budget.expenses.id(req.params.expenseId)
+    if (budget.owner.equals(req.user.profile._id)){
+      expense.set(req.body)
+      budget.save()
+      .then(() =>{
+        res.redirect(`/budgets/${budget._id}`)
+      })
+      .catch(err =>{
+        console.log(err)
+        res.redirect('/budgets')
+      })
+    } else {
+        throw new Error('Not allowed')
+    }
   })
-  .catch(err =>{
+  .catch(err => {
     console.log(err)
     res.redirect('/budgets')
-    })
+  })
 }
 
 function editExpense(req, res){

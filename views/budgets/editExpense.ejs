@@ -5,7 +5,7 @@
 <div class="edit-expense-container">
   <div class="update-expense-container">
     <div id="title-text"><%= title %></div>
-    <form id="update-expense-form" action="/budgets/<%= budget._id %>/expenses/<%= expense.id %> ?_method=PUT" method="post">
+    <form id="update-expense-form" action="/budgets/<%= budget._id %>/expenses/<%= expense.id %>?_method=PUT" method="post">
       <label for="expense-input">Expense Name:</label>
       <input type="text" name="name" id="expense-input" value="<%= expense.name %>">
       <label for="cost-input">Cost:</label>

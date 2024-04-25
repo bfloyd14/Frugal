@@ -79,11 +79,11 @@ button {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  margin-bottom: 75px;
 }
 
 #user-text, #welcome-text, #app-text, #quote-text {
   padding: 5px;
+
 }
 
 #user-text {
@@ -92,18 +92,21 @@ button {
 
 #welcome-text {
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
 #app-text {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 #title-page-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
+  margin-top: 10px;
 }
 #frugal-logo {
   font-size: 40px;
