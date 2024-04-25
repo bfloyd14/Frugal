@@ -3,7 +3,7 @@
 ![alt text](https://i.imgur.com/mT3ufQg.png "frugal Add Budget Page")
 ![alt text](https://i.imgur.com/ybLNRKc.png "frugal Show Budget Page")
 
-
+frugal is a personal budgeting app that allows you to create multiple monthly budgets.  Within each budget is created, you will be able to add, edit and delete monthly expenses as well as set your personal goal that you are saving towards.  Every expense is connected to your set budget amount and the amount will increase and/or decrease based on your expense cost.  frugal is intended to keep your financials organized, to help identify where you can reduce your monthly costs and then put those monthly savings towards something awesome! 
 
 
 ## [Try the frugal App here](https://frugal.fly.dev/)
@@ -14,8 +14,9 @@
 
 - HTML
 - CSS
+- MongoDB
 - JavaScript
-- Whimsical
+- Whimsical 
 - Trello
 - Fly.io
 
