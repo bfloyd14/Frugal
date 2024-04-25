@@ -49,11 +49,11 @@
 }
 #goal-show {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
+  padding: 10px;
 }
 
 #purpose-show {
-  padding: 20px;
   font-size: 18px;
 }
 
