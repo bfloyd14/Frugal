@@ -11,7 +11,7 @@
           <label for="income-input">Monthly Budget Amount:</label>
           <input type="number" name="income" id="income-input" value="<%= budget.income %>">
           <label for="purpose-textarea">Purpose/Goal:</label>
-          <textarea type="text" name="purpose" id="purpose-textarea" cols="30" rows="10" value="<%= budget.purpose %>"></textarea>
+          <textarea type="text" name="purpose" id="purpose-textarea" cols="30" rows="10" value="<%= budget.purpose %>"><%= budget.purpose %></textarea>
           <button id="save-btn" type="submit">Save Budget</button>
         </form>
   </div>

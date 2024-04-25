@@ -37,7 +37,7 @@
   font-weight: bold;
 }
 
-.expense-goal-container {
+.show-table-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -64,10 +64,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 #budget-income {
-  font-size: 72px;
+  font-size: 48px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -84,7 +85,6 @@
   border-radius: 6px;
   box-shadow: 10px 10px 5px;
   width: 200px;
-  margin-left: 50px;
 }
 
 #add-expense{
@@ -133,6 +133,7 @@
   justify-content: center;
   align-items: center;
   width: 800px;
+  margin-top: 40px;
 }
 
 table {

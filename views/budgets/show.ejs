@@ -23,11 +23,32 @@
         <% budget.expenses.forEach(expense=>{%>
           <% income -= expense.cost %>
         <% }) %>
+        Budget Remaining: 
         $<%= income %>
     </div>
   </div>
 
-<div class="expense-goal-container">
+<div class="show-table-container">
+  <div class="add-expense-container">
+    <div id="add-expense">Add Expense</div>
+    <form 
+    id="add-expense-form"
+    action="/budgets/<%= budget._id %>/expenses" 
+    method="POST"
+    >
+    <label for="expense-input">Expense Name:</label>
+    <input type="text" name="name" id="expense-input">
+    <label for="cost-input">Cost:</label>
+    <input type="number" name="cost" id="cost-input">
+    <label for="expense-type-input">Type of Expense:</label>
+    <select name="expenseType" id="expense-type-input">
+      <option value="Fixed Costs">Fixed Costs</option>
+      <option value="Planned Spending">Planned Spending</option>
+    </select>
+    <button id="add-expense-btn" type="submit">Add Expense</button>
+  </form>
+  </div>
+</div>
   <div class="expense-table-container">
         <table id="expense-table">
           <thead>
@@ -61,26 +82,6 @@
       </table>
       <% } %>
     </div>
-    <div class="add-expense-container">
-      <div id="add-expense">Add Expense</div>
-      <form 
-      id="add-expense-form"
-      action="/budgets/<%= budget._id %>/expenses" 
-      method="POST"
-      >
-      <label for="expense-input">Expense Name:</label>
-      <input type="text" name="name" id="expense-input">
-      <label for="cost-input">Cost:</label>
-      <input type="number" name="cost" id="cost-input">
-      <label for="expense-type-input">Type of Expense:</label>
-      <select name="expenseType" id="expense-type-input">
-        <option value="Fixed Costs">Fixed Costs</option>
-        <option value="Planned Spending">Planned Spending</option>
-      </select>
-      <button id="add-expense-btn" type="submit">Add Expense</button>
-    </form>
-    </div>
-  </div>
 </div>
 
 <%- include('../partials/footer') %>
