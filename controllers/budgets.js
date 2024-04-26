@@ -7,9 +7,6 @@ function newBudget(req, res){
 }
 
 function create(req, res){
-  for(let key in req.body){
-    if(req.body[key] === '') delete req.body[key]
-  }
   req.body.owner = req.user.profile._id
   Budget.create(req.body)
   .then(budget =>{
@@ -87,9 +84,6 @@ function edit(req, res){
 }
 
 function update(req, res){
-  for(let key in req.body){
-    if(req.body[key] === '') delete req.body[key]
-  }
   Budget.findByIdAndUpdate(req.params.budgetId, req.body, {new: true})
   .then(budget =>{
     res.redirect(`/budgets/${budget._id}`)
@@ -111,18 +105,15 @@ function deleteExpense(req, res){
       .catch(err =>{
         console.log(err)
         res.redirect('/')
-        })
-    })
+      })
+  })
     .catch(err =>{
     console.log(err)
     res.redirect('/')
-    })
+  })
 }
 
 function updateExpense(req, res){
-  for(let key in req.body){
-    if(req.body[key] === '') delete req.body[key]
-  }
   Budget.findById(req.params.budgetId)
   .then(budget =>{
     const expense = budget.expenses.id(req.params.expenseId)

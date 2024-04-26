@@ -18,6 +18,10 @@ frugal is a personal budgeting app that allows you to create multiple monthly bu
 - Whimsical 
 - Trello
 - Fly.io
+- Google OAuth
+- Express
+- Node
+- Passport.js
 
 ## Credits
 
